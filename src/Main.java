@@ -8,17 +8,13 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O Poderoso Chefão");
-        meuFilme.setAnoLancamento(1970);
+        Filme meuFilme = new Filme("O Poderoso Chefão", 1970);
         meuFilme.setDuracaoEmMinutos(150);
         meuFilme.setIncluidoNoPlano(true);
         meuFilme.exibeFichaTecnica();
         System.out.println("Duração do filme (minutos): " + meuFilme.getDuracaoEmMinutos());
 
-        Serie minhaSerie = new Serie();
-        minhaSerie.setNome("Breaking Bad");
-        minhaSerie.setAnoLancamento(2000);
+        Serie minhaSerie = new Serie("Breaking Bad", 2000);
         minhaSerie.setDuracaoEmMinutos(150);
         minhaSerie.setIncluidoNoPlano(true);
         minhaSerie.exibeFichaTecnica();
@@ -28,9 +24,7 @@ public class Main {
         minhaSerie.setAtiva(false);
         System.out.println("Duração da série (minutos): " + minhaSerie.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora =  new CalculadoraDeTempo();
@@ -48,9 +42,7 @@ public class Main {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeNovo = new Filme();
-        filmeNovo.setNome("Dogville");
-        filmeNovo.setAnoLancamento(2003);
+        Filme filmeNovo = new Filme("Dogville", 2003);
         filmeNovo.setDuracaoEmMinutos(200);
         filmeNovo.avalia(10);
 

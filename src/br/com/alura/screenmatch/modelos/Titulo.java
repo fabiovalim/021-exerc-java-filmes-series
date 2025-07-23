@@ -8,6 +8,11 @@ public class Titulo {
     private double somaAvaliacoes;
     private boolean incluidoNoPlano;
 
+    public Titulo(String nome, int anoLancamento) {
+        this.nome = nome;
+        this.anoLancamento = anoLancamento;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
