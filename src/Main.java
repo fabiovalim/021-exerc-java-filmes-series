@@ -4,12 +4,11 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
-        Filme outroFilme = new Filme();
-        Serie minhaSerie = new Serie();
-
         meuFilme.setNome("O Poderoso Chefão");
         meuFilme.setAnoLancamento(1970);
         meuFilme.setDuracaoEmMinutos(150);
@@ -17,6 +16,7 @@ public class Main {
         meuFilme.exibeFichaTecnica();
         System.out.println("Duração do filme (minutos): " + meuFilme.getDuracaoEmMinutos());
 
+        Serie minhaSerie = new Serie();
         minhaSerie.setNome("Breaking Bad");
         minhaSerie.setAnoLancamento(2000);
         minhaSerie.setDuracaoEmMinutos(150);
@@ -28,6 +28,7 @@ public class Main {
         minhaSerie.setAtiva(false);
         System.out.println("Duração da série (minutos): " + minhaSerie.getDuracaoEmMinutos());
 
+        Filme outroFilme = new Filme();
         outroFilme.setNome("Avatar");
         outroFilme.setAnoLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
@@ -46,5 +47,21 @@ public class Main {
         episodio.setSerie(minhaSerie);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        Filme filmeNovo = new Filme();
+        filmeNovo.setNome("Dogville");
+        filmeNovo.setAnoLancamento(2003);
+        filmeNovo.setDuracaoEmMinutos(200);
+        filmeNovo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>(); // trabalhando com listas
+        listaDeFilmes.add(meuFilme);                        // consultar no JavaDoc
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(filmeNovo);
+        for (int i = 0; i < listaDeFilmes.size(); i++) {
+            System.out.println((i+1) + "º filme: " + listaDeFilmes.get(i).getNome());
+        }
+
+
     }
 }
